@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>welcome</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script> 
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"> 
+<script src="/static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+<body>
+    <img class="face" src="/static/css/profPic.jpg" alt="Ramkrishna Hegde">
+    <div class="details">
+        <ul>
+            <li>Ramakrishna Hegde</li>
+            <li class='dt'>B.E Electronics and Communication</li>
+            <li class="dt">RNSIT,Banglore</li>
+            <li><span class="glyphicon glyphicon-envelope"></span>Email:hegderam17@gmail.com</li>
+            <li>ph.no:7892608895</li>
+        </ul>
+    </div>
+    <div id="nv">
+        <ul class="nav nav-pills">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Dropdown<span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="hello" role="button" aria-haspopup="true" aria-expanded="false">
+                Dropdown <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu"> 
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Dropdown <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu"> 
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<h1>welcome to my website</h1>
+<div class="container">
+<form action="/success/" method="POST">
+    {%csrf_token%}
+<h2>Please sign in</h2>
+<input class="fc" type="text" name="email" value="{{person.email}}" placeholder="Email address"><br>
+<input class="fc" type="text" name="password" value="{{person.pw}}" placeholder="Password"><br>
+<div class="cb">
+    <label>Remember me
+      <input type="checkbox" value="remember-me">
+    </label>
+  </div>
+<button class="sbt" type="submit">Sign in</button>
+</form>
+</div>
+</body>
+</html>
